@@ -143,6 +143,7 @@ async def send_file_content(websocket, file_path, tail):
         if tail:
             await tail_file(websocket, f)
 
+
 def get_last_lines(file):
     """
     Get the last lines of a file.
