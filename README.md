@@ -1,6 +1,6 @@
 # Long Bottom - WebSocket based Log Viewer.
 
-Long bottom ( what are we if not magicians? xD ) log Viewer is a Python script like a well cast Lumos spell, that uses WebSocket and asyncio to provide real-time log viewing in a web browser (mischief managed!). It allows clients to connect to a server and request a log file (accio logs !), tail the log file in real-time and provides a heartbeat mechanism (after all this time? always) to keep the connection alive.
+Long bottom ( what are we if not magicians? ) is a Python script like a well cast Lumos spell, that uses WebSocket and asyncio to provide real-time log viewing in a web browser (mischief managed!). It allows clients to connect to a server and request a log file (accio logs !), tail the log file in real-time and provides a heartbeat mechanism (after all this time? always) to keep the connection alive.
 
 This script is essentially mimicking the behavior of `tail -f` command, which shows the latest & trailing entries of any specified file.
 
