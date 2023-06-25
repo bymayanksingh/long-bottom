@@ -5,7 +5,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-output_file=$2
+output_file=$1
 
 while true; do
     echo $(date) >> $output_file
