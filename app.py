@@ -7,7 +7,6 @@ from collections import deque
 from urllib.parse import urlparse, parse_qs
 
 import websockets
-from ansi2html import Ansi2HTMLConverter
 
 
 NUM_LINES = 1000
@@ -16,7 +15,6 @@ HEARTBEAT_INTERVAL = 15 #seconds
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
 
 allowed_directories = ["./long-bottom"]
-ansi_to_html_converter = Ansi2HTMLConverter(inline=True)
 
 async def send_log_data(websocket, path):
     """
@@ -143,7 +141,6 @@ async def send_file_content(websocket, file_path, tail):
         if tail:
             await tail_file(websocket, f)
 
-
 def get_last_lines(file):
     """
     Get the last lines of a file.
@@ -158,7 +155,7 @@ def get_last_lines(file):
     lines = deque(file, NUM_LINES)
     content = ' '.join(lines)
 
-    return ansi_to_html_converter.convert(content, full=False)
+    return content
 
 
 async def send_content(websocket, content):
@@ -188,7 +185,6 @@ async def tail_file(websocket, file):
         content = file.read()
 
         if content:
-            content = ansi_to_html_converter(content, full=False)
             await send_content(websocket, content)
         else:
             await asyncio.sleep(1)
