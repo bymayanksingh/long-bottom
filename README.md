@@ -58,6 +58,14 @@ Replace /your/log/directory/ with the directory where your log files are stored.
 After starting the server, you'll also need to serve your index.html file.
 I used VS Code's Live Server extension for the same.
 
+To feed live data to demo.log file, I ran the script to simply feed timestamp 
+every half a second, to use the script:
+
+```
+chmod +x script.sh
+./script.sh demo.log 
+```
+
 ### How It Works
 
 Below is a sequence diagram illustrating how long-bottom log viewer actually works:
