@@ -52,7 +52,7 @@ cd long-bottom
 To run the server, use the following command:
 
 ```shell
-python3 main.py --host 127.0.0.1 --port 8765 --prefix /your/log/directory/
+python3 app.py --host 127.0.0.1 --port 8765 --prefix /your/log/directory/
 ```
 
 Replace /your/log/directory/ with the directory where your log files are stored.
