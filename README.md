@@ -19,7 +19,6 @@ This script is essentially mimicking the behavior of `tail -f` command, which sh
 
 ```shell
 git clone https://github.com/bymayanksingh/long-bottom.git
-cd long-bottom
 ```
 
 2. Navigate to the project directory:
